@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'comments',
-    'gunicorn',
 ]
 
 MIDDLEWARE = [
