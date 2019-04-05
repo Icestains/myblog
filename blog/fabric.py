@@ -1,7 +1,7 @@
 from fabric.api import env, run
 from fabric.operations import sudo
 
-GIT_REPO = "you git repository"
+GIT_REPO = "https://github.com/Icestains/myblog.git"
 
 env.user = 'icestains'
 env.password = 'm@5QU3R@D3@ESC'
@@ -23,5 +23,5 @@ def deploy():
         ../env/bin/python3 manage.py collectstatic --noinput &&
         ../env/bin/python3 manage.py migrate
         """.format(source_folder))
-    sudo('restart gunicorn-demo.zmrenwu.com')
+    sudo('systemctl restart gunicorn-demo')
     sudo('service nginx reload')
