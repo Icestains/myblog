@@ -10,6 +10,8 @@ python manage.py runserver 8000
 
 
 ## 部署
+> ！！！部署前先检查settings里的debug是不是False！！！
+
 > 使用了fabric来部署到远程服务器，通过github托管代码，将代码同步到服务器上。
 参考博客[使用 Fabric3 自动化部署](https://blog.csdn.net/qq_41854273/article/details/83344255)
 
