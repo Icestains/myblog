@@ -9,6 +9,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    {# icon #}
+    <link rel="shortcut icon" href="{% static 'blog/img/favicon.ico' %}">
+
     <!-- css -->
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     {#    <link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.css' %}">#}
@@ -46,9 +49,9 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
                             <li class="cl-effect-11"><a href="{% url 'blog:index' %}" data-hover="首页">首页</a></li>
-{#                            <li class="cl-effect-11"><a href="full-width.html" data-hover="博客">博客</a></li>#}
-{#                            <li class="cl-effect-11"><a href="about.html" data-hover="关于">关于</a></li>#}
-{#                            <li class="cl-effect-11"><a href="contact.html" data-hover="联系">联系</a></li>#}
+                            {#                            <li class="cl-effect-11"><a href="full-width.html" data-hover="博客">博客</a></li>#}
+                            {#                            <li class="cl-effect-11"><a href="about.html" data-hover="关于">关于</a></li>#}
+                            {#                            <li class="cl-effect-11"><a href="contact.html" data-hover="联系">联系</a></li>#}
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </nav>
@@ -124,7 +127,7 @@
                         {% get_tags as tag_list %}
                         <ul>
                             {% for tag in tag_list %}
-                            <li><a href="{% url 'blog:tag' tag.pk %}">{{ tag.name }}</a></li>
+                                <li><a href="{% url 'blog:tag' tag.pk %}">{{ tag.name }}</a></li>
                             {% empty %}
                                 暂无标签！
                             {% endfor %}
